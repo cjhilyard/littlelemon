@@ -1,6 +1,16 @@
 asgiref==3.8.1
+astroid==3.3.5
+colorama==0.4.6
+dill==0.3.9
 Django==5.1.2
+djangorestframework==3.15.2
+isort==5.13.2
+mccabe==0.7.0
 mysqlclient==2.2.4
+platformdirs==4.3.6
+pylint==3.3.1
 sqlparse==0.5.1
+tomli==2.0.2
+tomlkit==0.13.2
 typing_extensions==4.12.2
 tzdata==2024.2
