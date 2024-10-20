@@ -23,6 +23,7 @@ from django.urls import path, include
 #router.register(r'tables', views.BookingViewSet, basename='tables')
 
 urlpatterns = [
+    path('', include('restaurant.urls')),
     path('admin/', admin.site.urls),
     path('api/', include('restaurant.urls')),
     #path('restaurant/booking/', include(router.urls)),
