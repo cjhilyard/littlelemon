@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'restaurant',
+    'reservations',
     'rest_framework',
     'rest_framework.authtoken',
     'djoser',
@@ -82,9 +83,9 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'my_database',
+        'NAME': 'reservations',
         'USER': 'root',
-        'PASSWORD': 'password',
+        'PASSWORD': 'root',
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'OPTIONS': {

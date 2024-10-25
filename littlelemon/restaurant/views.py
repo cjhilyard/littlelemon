@@ -1,32 +1,41 @@
-
+# from django.http import HttpResponse
 from django.shortcuts import render
-from rest_framework.decorators import permission_classes
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.views import APIView
-from rest_framework.viewsets import ModelViewSet
-from rest_framework.response import Response
-from .serializers import BookingSerializer, MenuSerializer
-from .models import Booking, Menu
+
+from .models import Menu
+from django.core import serializers
+from .models import Booking
+from datetime import datetime
+import json
+# from .forms import BookingForm
+
+def home(request):
+    return render(request, 'index.html')
+
+def about(request):
+    return render(request, 'about.html')
+
+# def book(request):
+#     form = BookingForm()
+#     if request.method == 'POST':
+#         form = BookingForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#     context = {'form':form}
+#     return render(request, 'book.html', context)
+
+# Add code for the bookings() view
 
 
-# Create your views here.
-def index(request):
-    return render(request, 'index.html', {})
 
-@permission_classes([IsAuthenticated])
-class BookingView(APIView):
+def menu(request):
+    menu_data = Menu.objects.all()
+    main_data = {"menu": menu_data}
+    return render(request, 'menu.html', {"menu": main_data})
 
-    def get(self, request):
-        return Response({"message": "This view is protected"})
 
-@permission_classes([IsAuthenticated])
-class BookingViewSet(ModelViewSet):
-
-    def get(self, request):
-        return Response({"message": "This view is protected"})
-
-@permission_classes([IsAuthenticated])
-class MenuItemsView(APIView):
-
-    def get(self, request):
-        return Response({"message": "This view is protected"})
+def display_menu_item(request, pk=None): 
+    if pk: 
+        menu_item = Menu.objects.get(pk=pk) 
+    else: 
+        menu_item = "" 
+    return render(request, 'menu_item.html', {"menu_item": menu_item}) 

@@ -24,18 +24,12 @@
 ### run django
 * python manage.py runserver
 
-### module 4 goals
-* [complete] ~~Does the web application use Django to serve static HTML content?~~
-* [complete] ~~Has the learner committed the project to a Git repository?~~
-* [complete] ~~Does the application connect the backend to a MySQL database?~~
-* [complete] ~~Are the menu and table booking APIs implemented?~~
-  * http://localhost:8000/api/menu-items/
-  * http://localhost:8000/api/booking/
-* [complete] ~~Is the application set up with user registration and authentication?~~
-* [complete] ~~Does the application contain unit tests?~~
-* [complete] ~~Can the API be tested with the Insomnia REST client?~~
+### module 5 goals
+* Create new MySQL database credentials
+* Update the project settings in Django to enable connection with MySQL
+* Migrate models and update the database table
 
-### module 4 tasks
+### module 5 tasks
 * Does the web application use Django to serve static HTML content?
   * http://localhost:8000/
 * Has the learner committed the project to a Git repository?
@@ -48,6 +42,3 @@
 * Is the application set up with user registration and authentication?
   * http://127.0.0.1:8000/auth/users/
 * Does the application contain unit tests?
-  * yes under tests folder
-* Can the API be tested with the Insomnia REST client?
-  * yes

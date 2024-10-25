@@ -1,13 +1,12 @@
-
-#define URL route for index() view
 from django.urls import path
-#from .views import BookingView, MenuView
 from . import views
-from rest_framework.authtoken.views import ObtainAuthToken
+
 
 urlpatterns = [
-    path('', views.index, name='booking'),
-    path('booking/', views.BookingView.as_view(), name='booking'),
-    path('menu-items/', views.MenuItemsView.as_view(), name='menu' ),
-    path('api-token-auth/', ObtainAuthToken.as_view(), name='api-token-auth'),
+    path('', views.home, name="home"),
+    path('about/', views.about, name="about"),
+    # path('book/', views.book, name="book"),
+    path('menu/', views.menu, name="menu"),
+    path('menu_item/<int:pk>/', views.display_menu_item, name="menu_item"),  
+    # path('bookings/', views.bookings, name="bookings"),
 ]

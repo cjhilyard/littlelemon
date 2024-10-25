@@ -4,8 +4,8 @@ services:
     image: mysql
     restart: always
     environment:
-      MYSQL_DATABASE: my_database
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: reservations
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_USER: user
       MYSQL_PASSWORD: password
     ports:
