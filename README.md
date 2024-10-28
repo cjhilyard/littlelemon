@@ -6,17 +6,6 @@
 * source venv/Scripts/activate
 * pip install -r requirements.txt
 
-### admin
-* username: admin
-* password: admin
-* http://localhost:8000/admin/login/?next=/admin/
-
-### new user registration
-* http://127.0.0.1:8000/auth/users/
-
-### token create
-* http://127.0.0.1:8000/auth/token/login/
-
 ### testing
 * cd littlelemon
 * pytest
@@ -24,21 +13,6 @@
 ### run django
 * python manage.py runserver
 
-### module 5 goals
-* Create new MySQL database credentials
-* Update the project settings in Django to enable connection with MySQL
-* Migrate models and update the database table
-
-### module 5 tasks
-* Does the web application use Django to serve static HTML content?
-  * http://localhost:8000/
-* Has the learner committed the project to a Git repository?
-  * https://github.com/cjhilyard/littlelemon
-* Does the application connect the backend to a MySQL database?
-  * yes
-* Are the menu and table booking APIs implemented?
-  * http://localhost:8000/api/menu-items/
-  * http://localhost:8000/api/booking/* 
-* Is the application set up with user registration and authentication?
-  * http://127.0.0.1:8000/auth/users/
-* Does the application contain unit tests?
+### module 5 urls
+* http://localhost:8000/
+ 
